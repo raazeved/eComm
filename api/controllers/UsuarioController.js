@@ -5,7 +5,6 @@ const enviarEmailRecovery = require ("../helpers/email-recovery");
 class UsuarioController {
 
 // GET /  
-
 index (req, res, next) {
 
         Usuario.findById(req.payload.id).then( usuario => { 
@@ -33,17 +32,20 @@ show(req,res,next) {
 // POST / registrar 
 
 store(req, res, next) {
-    const {nome, email, password}  = req.body;
+    const {nome, email, password, loja}  = req.body;
 
-    if (!nome || !email||!password) return res.status(422).json({errors: "Preencha todos os campos de cadastro"});
+    if (!nome || !email||!password|| !loja ) return res.status(422).json({errors: "Preencha todos os campos de cadastro"});
 
-    const usuario = new Usuario( {nome, email} );
+    const usuario = new Usuario( {nome, email, loja} );
 
     usuario.setSenha(password);
 
     usuario.save()
     .then( () => res.json( {usuario: usuario.enviarAuthJSON() } )) 
-    .catch (next);
+    .catch ((err) => {
+        console.log(err);
+        next(err);
+    });
 }
 
 // PUT 

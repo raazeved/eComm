@@ -21,3 +21,5 @@ optional:  jwt ({
     getToken: getTokenFromHeader
 })
 };
+
+module.exports = auth; 
