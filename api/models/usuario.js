@@ -64,6 +64,7 @@ UsuarioSchema.methods.gerarToken = function (){
         nome: this.nome,
         exp: parseFloat (exp.getTime() /1000,10)
     }, secret); 
+}
 
 UsuarioSchema.methods.enviarAuthJSON = function (){
         return {
