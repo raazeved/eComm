@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Usuario = mongoose.model("usuario");
-const Loja = mongoose.model("loja");
+const loja = mongoose.model("loja");
 
 module.exports = (req, res, next) => {
     if(!this.req.payload.id) return this.res.sendStatus(401);

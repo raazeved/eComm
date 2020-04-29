@@ -6,14 +6,14 @@ class LojaController {
 // GET /
 index (req, res, next ) {
     Loja.find({ }).select("_id nome cnpj email telefones endereco")
-    .then (Lojas => res.send({ Lojas }))
+    .then ( Lojas => res.send({ Lojas }))
     .catch(next);
 }
 
 // GET /:id
 show (req, res, next ) {
     Loja.findByid(req.params.id).select("_id nome cnpj email telefones endereco")
-    .then(Loja => res.send({ Loja }) )
+    .then( Loja => res.send({ Loja }) )
     .catch(next);
 }
 // POST /
@@ -63,4 +63,4 @@ remove (req, res, next ) {
 
 }
 
-modules.exports = LojaController;
+module.exports = LojaController;
