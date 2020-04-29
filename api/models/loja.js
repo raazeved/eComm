@@ -24,4 +24,4 @@ endereco: {
 
 lojaSchema.plugin(uniqueValidator, { message: "já esta sendo utilizado"} );
 
-module.exports = mongoose.model("loja", lojaSchema);
+module.exports = mongoose.model("Loja", lojaSchema);

@@ -75,7 +75,6 @@ UsuarioSchema.methods.enviarAuthJSON = function (){
             role: this.permissao,
             token: this.gerarToken()
         } ;
-
 };
 
 // RECUPERACAO 
@@ -84,14 +83,11 @@ UsuarioSchema.methods.enviarAuthJSON = function (){
         this.recovery.token = crypto.randomBytes(16).toString("hex");
         this.recovery.date = new Date ( new Date().getTime() + 24*60*60*1000);
         return this.recovery;
-
     };
 
     UsuarioSchema.methods.finalizarTokenRecuperacaoSenha= function(){
         this.recovery = {token: null, date: null };
         return this.recovery;
-
     };
 
-
-module.exports = mongoose.model( "usuario", UsuarioSchema);
+module.exports = mongoose.model( "Usuario", UsuarioSchema);

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Loja = mongoose.Schema("loja");
+const Loja = mongoose.Schema("Loja");
 
 class LojaController {
 

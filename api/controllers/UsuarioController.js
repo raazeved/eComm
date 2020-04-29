@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Usuario = mongoose.model("usuario");
+const Usuario = mongoose.model("Usuario");
 const enviarEmailRecovery = require ("../helpers/email-recovery");
 
 class UsuarioController {
