@@ -5,7 +5,7 @@ const lojaSchema = mongoose.Schema({
 
 nome: {type: String, required: true}, 
 cnpj: {type: String, required: true, unique: true}, 
-email: {type : string},
+email: {type: String},
 telefones: {
         type: [{type: String}]
 }, 
@@ -13,7 +13,7 @@ endereco: {
     type: {
         local :{type: String, required: true}, 
         numero: {type: String, required: true},
-        complemento: { type: string},  
+        complemento: { type: String},  
         bairro: {type: String, required: true}, 
         cidade: {type: String, required: true}, 
         CEP: {type: String, required: true }
@@ -22,4 +22,6 @@ endereco: {
    }
 }, { timestemps:true });
 
-modules.exports = mongoose.model("loja", lojaSchema);
+lojaSchema.plugin(uniqueValidator, { message: "já esta sendo utilizado"} );
+
+module.exports = mongoose.model("loja", lojaSchema);

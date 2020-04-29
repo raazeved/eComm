@@ -2,7 +2,7 @@
 const mongoose = require("mongoose"), 
     Schema = mongoose.Schema;
 const uniqueValidator = require ('mongoose-unique-validator');
-const crpyto = require("crypto");
+const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const secret = require ("../config").secret;
 
@@ -44,7 +44,7 @@ recovery: {
 UsuarioSchema.plugin(uniqueValidator,{message: "já está sendo utilizado!"});
 
 UsuarioSchema.methods.setSenha = function (password){
-    this.salt =crytpto.randomBytes(16).toString("hex");
+    this.salt =crypto.randomBytes(16).toString("hex");
     this.hash = crypto.pbkdf2Sync(password, this.salt, 10000,512, "sha512").toString("hex");
 };
 
