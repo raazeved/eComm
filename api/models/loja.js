@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const uniqueValidator = require('mongoose-unique-validator');
 
-const lojaSchema = mongoose.Schema({
+const lojaSchema = new mongoose.Schema({
 
 nome: {type: String, required: true}, 
 cnpj: {type: String, required: true, unique: true}, 
@@ -20,7 +20,7 @@ endereco: {
     }, 
     required : true
    }
-}, { timestemps:true });
+}, { timestamps:true });
 
 lojaSchema.plugin(uniqueValidator, { message: "já esta sendo utilizado"} );
 

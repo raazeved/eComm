@@ -12,7 +12,7 @@ router.get("/:id", auth.required, lojaController.show);
 
 router.post("/", auth.required, lojaController.store);
 router.put("/:id", auth.required, lojaValidation, lojaController.update);
-router.delete("/:id", auth.required, LojaValidation, lojaController.remove);
+router.delete("/:id", auth.required, lojaValidation, lojaController.remove);
 
 
 module.exports = router;

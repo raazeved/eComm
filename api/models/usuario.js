@@ -23,7 +23,7 @@ email: {
 }, 
 loja: {
     type: Schema.Types.ObjectId, 
-    ref: "Loja",
+    ref: "loja",
     required: [true, "não pode ficar vazia!"]
 },
 permissao: {
