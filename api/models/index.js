@@ -1,2 +1,2 @@
-require("./usuario");
-require("./loja"); 
+require("./Usuario");
+require("./Loja"); 

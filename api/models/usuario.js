@@ -22,7 +22,7 @@ email: {
         match: [/\S+@\S+\.\S+/, 'é inválido.']
 }, 
 loja: {
-    type: Schema.Types.ObjectId, 
+    type: mongoose.Schema.Types.ObjectId, 
     ref: "loja",
     required: [true, "não pode ficar vazia!"]
 },
