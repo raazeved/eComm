@@ -7,7 +7,7 @@
 
 ##  Powering the Platform Economy
 ![ecomm2](https://github.com/raazeved/eComm/blob/master/B2B-APP-VENDAS.jpg)
-### Leading technology for marketplace, dropship and business ecosystems.
+### Leading technology for ecommerce, dropship and business ecosystems.
 
 ## Join the Market Revolution
 ![ecomm3](https://github.com/raazeved/eComm/blob/master/B2C-SHOP.jpg)
