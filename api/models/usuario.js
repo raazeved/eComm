@@ -48,7 +48,7 @@ UsuarioSchema.methods.setSenha = function (password){
     this.hash = crypto.pbkdf2Sync(password, this.salt, 10000,512, "sha512").toString("hex");
 };
 
-UsuarioSchema.methods.ValidaSenha= function(password){
+UsuarioSchema.methods.validarSenha= function(password){
     const hash = crypto.pbkdf2Sync(password, this.salt, 10000,512,"sha512").toString("hex");
     return hash == this.hash ;
 };

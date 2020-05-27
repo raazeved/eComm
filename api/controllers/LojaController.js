@@ -4,20 +4,20 @@ const Loja = mongoose.model("Loja");
 class LojaController {
 
 // GET /
-index (req, res, next ) {
+index (req, res, next) {
     Loja.find({ }).select("_id nome cnpj email telefones endereco")
     .then ( Lojas => res.send({ Lojas }))
     .catch(next);
 }
 
 // GET /:id
-show (req, res, next ) {
+show (req, res, next) {
     Loja.findByid(req.params.id).select("_id nome cnpj email telefones endereco")
     .then( Loja => res.send({ Loja }) )
     .catch(next);
 }
 // POST /
-store (req, res, next ) {
+store (req, res, next) {
     const { nome, cnpj, email, telefones, endereco } = req.body; 
     const error = []; 
     if(!nome) error.push("nome");
@@ -32,8 +32,7 @@ store (req, res, next ) {
 }
 
 // PUT /:id
-
-update (req, res, next ) {
+update (req, res, next) {
     const {nome, cnpj, email, telefones, endereco}= req.body; 
     Loja.findByid(req.params.id).then( loja => { 
     if(!loja) return res.status(422).send({error: "Loja não existe."});
@@ -49,9 +48,7 @@ update (req, res, next ) {
 }
 
 // DELETE /:id
-
-
-remove (req, res, next ) {
+remove (req, res, next) {
 
     Loja.findByid(req.params.id).then( loja => { 
         if(!loja) return res.status(422).send({error: "Loja não existe."});
@@ -59,7 +56,6 @@ remove (req, res, next ) {
         loja.remove().then(() => res.send({deleted: true })).catch(next);   
         }).catch(next);
 }
-
 
 }
 

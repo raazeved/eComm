@@ -74,17 +74,12 @@ remove (req,res,next ) {
     }).catch(next);
 }
 
-
-// POST / LOGIN 
-login(req, res, next) {
-    const {nome, email, password}  = req.body;
-    if (!email) return res.status(422).json ({errors: { email: "não pode ficar vazio"}});
-    if (!password) return res.status(422).json ({errors: { password: "não pode ficar vazio"}});
-    Usuario.findOne({email}), then ((usuario) =>{
-        if (!usuario) return res.status(401).json ({errors: "Usuário não registrado"});
-        if (!usuario.validarSenha(password)) return res.status(401).json ({errors: "Senha invalida"});
-        return res.json( {usuario: usuario.enviarAuthJSON()});
-
+login(req, res, next){
+    const { email, password } = req.body;
+    Usuario.findOne({ email }).then((usuario) => {
+        if(!usuario) return res.status(401).json({ errors: "Usuario não registrado" });
+        if(!usuario.validarSenha(password)) return res.status(401).json({ errors: "Senha inválida" });
+        return res.json({ usuario: usuario.enviarAuthJSON() });
     }).catch(next);
 }
 

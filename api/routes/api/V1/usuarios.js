@@ -7,7 +7,7 @@ const usuarioController = new UsuarioController();
 // ROTAS DE USUARIOS 
 
 router.post("/login", usuarioController.login);
-router.post("/registrar", usuarioController.store);
+router.post("/registrar", usuarioController.store); // testado
 router.put("/", auth.required, usuarioController.update);
 
 router.delete("/", auth.required, usuarioController.remove);
@@ -17,7 +17,7 @@ router.post("/recuperar-senha", usuarioController.createRecovery);
 router.get("/senha-recuperada", usuarioController.showCompleteRecovery);
 router.post("/senha-recuperada", usuarioController.completeRecovery);
 
-router.get("/", auth.required, usuarioController.index); // pegar dados do usuario requisitado
-router.get("/:id", auth.required, usuarioController.show);
+router.get("/", auth.required, usuarioController.index);    // pegar dados do usuario requisitado
+router.get("/:id", auth.required, usuarioController.show);  
 
 module.exports = router;
