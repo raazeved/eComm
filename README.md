@@ -1,4 +1,5 @@
-# eCommerce industry solutions based alligned Market Revolution.
+# eCommerce industry solutions based on Market Revolution.
+
 ### Today’s buyer wants more. Give them more options with an online market.
 ![ecomm1](https://github.com/raazeved/eComm/blob/master/Images/B2C-SHOP.jpg)
 
@@ -8,14 +9,14 @@ I   - PROJECT PREPARATION   ( Organize a pitch competition )
 
 II  - BUSINESS BLUEPRINT    ( Natively pre-configured business scenarios )
 
-III - REALIZATION           ( Adapting MDA OMG => PIM -> PSM -> CODE )
+III - REALIZATION           ( Adapting MDA OMG => PIM -> PSM -> JAVA or Other Source Code )
 
-IV  - FINAL PREPARATION     ( Regression Tests & Kanban & DevOps & UAT & Training)
+IV  - FINAL PREPARATION     ( Regression Tests a Kanban & DevOps integration with UAT & Functionality Training)
 
-V   - GO LIVE & SUPPORT     
+V   - GO LIVE & SUPPORT     ( [eCOMMERCE in Data Centers](https://github.com/raazeved/Digital_Platform_Datacenters) )
 
 ------------------------------------------------
-### In general, e-commerce businesses projects should be implemented by a methodology has tested and confirmed that's works for several business projects for a long time in order to deacrease costs and the uncertainty of success for the teams responsable for those implementation, as a simple guidelines. There are a lot of methodologies but this is my github and I like ASAP mixed with others design parttner, as MDA by OMG. Take a look on ASAP, please.
+#### In general, e-commerce businesses projects should be implemented by a methodology has tested and confirmed that's works for several business projects for a long time in order to deacrease costs and the uncertainty of success for the teams responsable for those implementation, as a simple guidelines. There are a lot of methodologies but this is my github and I like ASAP mixed with others design parttner, as MDA by OMG. Take a look on ASAP, please.
 
 ![ecomm1](https://github.com/raazeved/eComm/blob/master/Images/ASAP_Methodology.jpg)
 
